@@ -2,11 +2,11 @@
 
 for i in .vimrc .vim .dircolors;
 do
-  ln -s $PWD/$i $HOME/test/$i
+  ln --symbolic --interactive $PWD/$i $HOME/$i
 done
 
 if [ $OSTYPE == darwin* ]; then
-  ln -s $PWD/.bashrc $HOME/test/.bash_profile
+  ln --symbolic --interactive $PWD/.bashrc $HOME/.bash_profile
 else
-  ln -s $PWD/.bashrc $HOME/test/.bashrc
+  ln --symbolic --interactive $PWD/.bashrc $HOME/.bashrc
 fi
