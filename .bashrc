@@ -17,7 +17,7 @@ alias egrep="egrep --color=always"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='powerline-multiline'
+export BASH_IT_THEME='slick'
 
 # Set this to false to turn off version control status checking within the prompt for all themes
 export SCM_CHECK=true
