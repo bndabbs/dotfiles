@@ -5,7 +5,8 @@ script_home="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Update bash-it if it's already installed or download it if it's not
 if [ -d $HOME/.bash_it ]; then
-  bash-it update
+  cd $HOME/.bash_it
+  git pull
 else
   git clone --depth=1 https://github.com/Bash-it/bash-it.git $HOME/.bash_it
 fi
