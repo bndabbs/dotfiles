@@ -1,5 +1,0 @@
-Host 10.87.10.1
-  ProxyCommand none
-
-Host 10.87.10.*
-  ProxyCommand ssh -q -x brad@10.87.10.1 -W %h:%p
