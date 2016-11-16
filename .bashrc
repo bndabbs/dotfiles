@@ -11,10 +11,6 @@ then
   eval `dircolors -b ~/.dircolors`
 fi
 
-alias ls="ls -Fh --color=always"
-alias grep="grep --color=always"
-alias egrep="egrep --color=always"
-
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
 export BASH_IT_THEME='slick'

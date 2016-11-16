@@ -1,2 +1,4 @@
-alias ls='ls --color=auto -p'
-alias ll='ls -l'
+alias ls="ls -hp --color=always"
+alias ll='ls -halp --color=always'
+alias grep="grep --color=always"
+alias egrep="egrep --color=always"
