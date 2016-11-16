@@ -27,6 +27,9 @@ else
   git clone --depth=1 https://github.com/Bash-it/bash-it.git $HOME/.bash_it
 fi
 
+# Add our custom aliases to bash-it
+ln $params $script_home/custom.aliases.bash $HOME/.bash_it/aliases/custom.aliases.bash
+
 # Add vim-plug if it doesn't already exist
 if [ ! -f $HOME/.vim/autoload/plug.vim ]; then
     curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
