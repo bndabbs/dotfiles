@@ -30,6 +30,14 @@ fi
 # Add our custom aliases to bash-it
 ln $params $script_home/custom.aliases.bash $HOME/.bash_it/aliases/custom.aliases.bash
 
+# Add Dustin's syntax highlights for Bro
+for i in ftdetect syntax; do
+    if [ ! -f $HOME/.vim/$i/bro.vim ]; then
+        curl -fLo $HOME/.vim/$i/bro.vim --create-dirs \
+        https://raw.githubusercontent.com/mephux/bro.vim/master/$i/bro.vim
+    fi
+done
+
 # Add vim-plug if it doesn't already exist
 if [ ! -f $HOME/.vim/autoload/plug.vim ]; then
     curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
