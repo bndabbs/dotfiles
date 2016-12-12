@@ -38,12 +38,6 @@ for i in ftdetect syntax; do
     fi
 done
 
-# Add vim-plug if it doesn't already exist
-if [ ! -f $HOME/.vim/autoload/plug.vim ]; then
-    curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
 # Add solarized colors for vim if not present
 if [ ! -f $HOME/.vim/colors/solarized.vim ]; then
     curl -fLo $HOME/.vim/colors/solarized.vim --create-dirs \

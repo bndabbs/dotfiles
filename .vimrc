@@ -113,6 +113,12 @@ set statusline+=%{fugitive#statusline()} " Git status
 map <C-t> :NERDTreeToggle<CR>
 
 " vim-plug configuration
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'pearofducks/ansible-vim'
