@@ -2,6 +2,8 @@ alias ls="ls -hp --color=always"
 alias ll='ls -halp --color=always'
 alias grep="grep --color=always"
 alias egrep="egrep --color=always"
+alias gc="git commit -S -v"
+alias gcm="git commit -S -v -m"
 
 alias bro-column="sed \"s/fields.//;s/types.//\" | column -s $'\t' -t"
 alias bro-awk='awk -F" "'
