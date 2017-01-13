@@ -28,3 +28,5 @@ if [ -e $BASH_IT/bash_it.sh ]
 then
   source $BASH_IT/bash_it.sh
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
