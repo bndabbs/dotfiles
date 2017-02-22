@@ -4,10 +4,12 @@ alias grep="grep --color=always"
 alias egrep="egrep --color=always"
 alias gc="git commit -S -v"
 alias gcm="git commit -S -v -m"
+alias sudo="sudo -E"
 
 # Commit and push everything
 gitdone() { git add -A; git commit -m "$1"; git push; }
 
+# Analyst stuff
 alias bro-column="sed \"s/fields.//;s/types.//\" | column -s $'\t' -t"
 alias bro-awk='awk -F" "'
 bro-grep() { grep -E "(^#)|$1" $2; }
