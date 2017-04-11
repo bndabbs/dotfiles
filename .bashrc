@@ -1,3 +1,8 @@
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 # Add coreutils bin dir to path
 if [ -d /usr/local/opt/coreutils/libexec ]
 then

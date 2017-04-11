@@ -56,7 +56,7 @@ set shiftwidth=4
 set smarttab
 
 " Display extra whitespace and tabs as characters, but not by default
-set nolist
+set list
 set listchars=tab:»·,trail:·,nbsp:·
 
 " Use one space, not two, after punctuation.

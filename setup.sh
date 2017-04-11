@@ -45,7 +45,13 @@ if [ ! -f $HOME/.vim/colors/solarized.vim ]; then
 fi
 
 # Symlink all of our dotfiles to the home directory
-for i in .vimrc .dircolors .bash_profile;
+for i in .vimrc .dircolors .bashrc;
 do
   ln $params $script_home/$i $HOME/$i
 done
+
+if [[ $OSTYPE == darwin* ]]; then
+  ln $params $script_home/.bashrc $HOME/.bash_profile
+else
+  ln $params $script_home/.bashrc $HOME/.bashrc
+fi
