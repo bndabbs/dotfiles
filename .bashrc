@@ -40,3 +40,6 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 if [ -n $TMUX ]; then
    alias vim="TERM=screen-256color vim"
 fi
+
+# Put bash in vim mode
+set -o vi
