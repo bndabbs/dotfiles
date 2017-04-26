@@ -1,3 +1,20 @@
+" vim-plug configuration
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'pearofducks/ansible-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-syntastic/syntastic'
+
+" Add plugins to &runtimepath
+call plug#end()
+
 " Leader
 let mapleader = " "
 
@@ -112,18 +129,12 @@ set statusline+=%{fugitive#statusline()} " Git status
 
 map <C-t> :NERDTreeToggle<CR>
 
-" vim-plug configuration
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
+" Options for syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-call plug#begin('~/.vim/plugged')
-
-Plug 'pearofducks/ansible-vim'
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
-
-" Add plugins to &runtimepath
-call plug#end()
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
