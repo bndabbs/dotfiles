@@ -7,7 +7,7 @@ alias gcm="git commit -S -v -m"
 alias sudo="sudo -E"
 
 # Commit and push everything
-gitdone() { git add -A; git commit -m "$1"; git push; }
+gitdone() { git add -A; git commit -S -v -m "$1"; git push; }
 
 # Analyst stuff
 alias bro-column="sed \"s/fields.//;s/types.//\" | column -s $'\t' -t"
