@@ -43,3 +43,6 @@ fi
 
 # Put bash in vim mode
 set -o vi
+
+# Set default editor to vim
+export EDITOR=vim
