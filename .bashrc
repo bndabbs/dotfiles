@@ -4,15 +4,13 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Add coreutils bin dir to path
-if [ -d /usr/local/opt/coreutils/libexec ]
-then
+if [ -d /usr/local/opt/coreutils/libexec ]; then
   export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
   export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
 # dircolors
-if [ -e ~/.dircolors ]
-then
+if [ -e ~/.dircolors ]; then
   eval `dircolors -b ~/.dircolors`
 fi
 
@@ -29,16 +27,19 @@ complete -cf sudo
 # Load Bash It
 export BASH_IT="$HOME/.bash_it"
 
-if [ -e $BASH_IT/bash_it.sh ]
-then
+if [ -e $BASH_IT/bash_it.sh ]; then
   source $BASH_IT/bash_it.sh
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+if [ -d /usr/local/opt/python/libexec/bin ]; then
+  export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+fi
+
 # Fix vim colors inside tmux
 if [ -n $TMUX ]; then
-   alias vim="TERM=screen-256color vim"
+  alias vim="TERM=screen-256color vim"
 fi
 
 # Put bash in vim mode
