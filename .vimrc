@@ -65,11 +65,11 @@ augroup END
 " shell for syntax highlighting purposes.
 let g:is_posix = 1
 
-" Expand tab to 4 spaces
-set tabstop=4
-set softtabstop=4
+" Expand tab to 2 spaces
+set tabstop=2
+set softtabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set smarttab
 
 " Display extra whitespace and tabs as characters, but not by default
