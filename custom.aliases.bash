@@ -60,3 +60,9 @@ topconvo() { if [ $# -lt 1 ]; then echo "Usage: topconvo conn.log"; else
                 }'                                                  \
     | sort -rnk 3                                                   \
     | head -n 20; fi; }
+
+
+# Use ssht to open tmux automatically for ssh sessions
+function ssht(){
+  ssh $* -t 'tmux a || tmux || /bin/bash'
+}
