@@ -47,3 +47,6 @@ set -o vi
 
 # Set default editor to vim
 export EDITOR=vim
+
+# Save history
+export PROMPT_COMMAND='history -a'
