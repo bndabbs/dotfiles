@@ -10,7 +10,7 @@ fi
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='simple'
+export BASH_IT_THEME='zork'
 
 # Set this to false to turn off version control status checking within the prompt for all themes
 export SCM_CHECK=true
