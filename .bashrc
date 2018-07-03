@@ -3,12 +3,6 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 
-# Add coreutils bin dir to path
-if [ -d /usr/local/opt/coreutils/libexec ]; then
-  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-fi
-
 # dircolors
 if [ -e ~/.dircolors ]; then
   eval `dircolors -b ~/.dircolors`
@@ -29,12 +23,6 @@ export BASH_IT="$HOME/.bash_it"
 
 if [ -e $BASH_IT/bash_it.sh ]; then
   source $BASH_IT/bash_it.sh
-fi
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
-if [ -d /usr/local/opt/python/libexec/bin ]; then
-  export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 fi
 
 # Fix vim colors inside tmux

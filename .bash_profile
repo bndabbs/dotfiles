@@ -6,3 +6,7 @@ fi
 if [ -f ~/.bash_local ]; then
   . ~/.bash_local
 fi
+
+if [ "$OSTYPE" == "darwin"* ]; then
+  . ~/.bash_darwin
+fi

@@ -45,7 +45,7 @@ if [ ! -f $HOME/.vim/colors/solarized.vim ]; then
 fi
 
 # Symlink all of our dotfiles to the home directory
-for i in .vimrc .dircolors .bashrc .bash_profile .tmux.conf;
+for i in .vimrc .dircolors .bashrc .bash_profile .bash_darwin .tmux.conf;
 do
   ln $params $script_home/$i $HOME/$i
 done
