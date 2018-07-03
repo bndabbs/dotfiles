@@ -4,5 +4,5 @@ fi
 
 # Source any local files
 if [ -f ~/.bash_local ]; then
-    source ~/.bashrc
+    source ~/.bash_local
 fi
