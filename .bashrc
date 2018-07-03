@@ -16,7 +16,7 @@ fi
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='slick'
+export BASH_IT_THEME='simple'
 
 # Set this to false to turn off version control status checking within the prompt for all themes
 export SCM_CHECK=true
@@ -47,6 +47,3 @@ set -o vi
 
 # Set default editor to vim
 export EDITOR=vim
-
-# Save history
-export PROMPT_COMMAND='history -a'
