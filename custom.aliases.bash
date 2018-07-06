@@ -1,7 +1,7 @@
-alias ls="ls -hp --color=always"
-alias ll='ls -halp --color=always'
-alias grep="grep --color=always"
-alias egrep="egrep --color=always"
+alias ls="ls -hp"
+alias ll='ls -halp'
+alias grep="grep"
+alias egrep="egrep"
 alias gc="git commit -S -v"
 alias gcm="git commit -S -v -m"
 alias sudo="sudo -E"
