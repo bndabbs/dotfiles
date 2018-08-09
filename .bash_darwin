@@ -11,3 +11,5 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 if [ -d /usr/local/opt/python/libexec/bin ]; then
   export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 fi
+
+alias dircolors="gdircolors"
