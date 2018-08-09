@@ -1,4 +1,4 @@
-if [ "$OSTYPE" == "darwin"* ]; then
+if [[ $OSTYPE == darwin* ]]; then
   . ~/.bash_darwin
 fi
 
