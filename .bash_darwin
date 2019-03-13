@@ -13,3 +13,6 @@ if [ -d /usr/local/opt/python/libexec/bin ]; then
 fi
 
 alias dircolors="gdircolors"
+
+ssh-add -K ~/.ssh/id_rsa &> /dev/null
+ssh-add -A &> /dev/null
