@@ -31,6 +31,8 @@ set autowrite     " Automatically :write before running commands
 set pastetoggle=<F10>
 set mouse=a       " Enable mouse in all modes
 set ttymouse=xterm2
+set modelines=0
+set nomodeline
 
 " Color adjustments
 syntax enable
