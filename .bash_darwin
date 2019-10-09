@@ -16,3 +16,8 @@ alias dircolors="gdircolors"
 
 ssh-add -K ~/.ssh/id_rsa &> /dev/null
 ssh-add -A &> /dev/null
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+complete -C /usr/local/bin/vault vault
+export PATH="/usr/local/opt/openssl/bin:/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"

@@ -5,7 +5,7 @@ fi
 
 # dircolors
 if [ -e ~/.dircolors ]; then
-  eval `dircolors -b ~/.dircolors`
+  eval "$(dircolors -b ~/.dircolors)"
 fi
 
 # Lock and Load a custom theme file
@@ -21,19 +21,14 @@ complete -cf sudo
 # Load Bash It
 export BASH_IT="$HOME/.bash_it"
 
-if [ -e $BASH_IT/bash_it.sh ]; then
-  source $BASH_IT/bash_it.sh
+if [ -e "${BASH_IT}"/bash_it.sh ]; then
+  source "${BASH_IT}"/bash_it.sh
 fi
 
 # Fix vim colors inside tmux
-if [ -n $TMUX ]; then
+if [ -n "${TMUX}" ]; then
   alias vim="TERM=screen-256color vim"
 fi
 
-# Put bash in vim mode
-set -o vi
-
 # Set default editor to vim
 export EDITOR=vim
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
